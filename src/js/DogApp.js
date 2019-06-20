@@ -1,6 +1,7 @@
 import React from 'react';
 import '../css/App.scss';
 import settingsIcon from '../core/icons/settings.svg';
+import logo from '../logo.svg';
 import App from '../core/js/App';
 
 class DogApp extends App {
@@ -9,12 +10,14 @@ class DogApp extends App {
             <App title="Dog Manager"
                 settingsIcon={settingsIcon}
                 mainActionText="Test"
-                mainAction={this.onClickMainAction}>
+                mainAction={this.onClickMainAction}
+                logo={logo}>
             </App>
         );
     }
 
     onClickMainAction() {
+        console.log("Click on main button !");
     }
 }
 

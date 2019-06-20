@@ -12,7 +12,7 @@ class Toolbar extends Component {
       // TODO: Display images only if set
     return (
       <header className="toolbar">
-        <img alt="AppCreator" src={this.props.logo} className="App-logo" />
+        <img alt="" src={this.props.logo} className="App-logo" />
         {this.props.children}
         <h1 className="App-title">{this.props.title}</h1>
         {mainButton}
