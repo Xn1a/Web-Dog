@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css?family=Asap:400,500,700');
+@import "base.scss";
+
+.App {
+  position: absolute;
+  font-family: 'Asap', sans-serif;
+  text-align: center;
+  background-color: $color-background;
+  height: 100%;
+  width: 100%;
+}
+
+/*****************Card******************************/
+
+.card {
+  display: inline-block;
+  overflow: hidden;
+  margin: 8px;
+  background-color: $color-primary;
+  color: $color-dark-text;
+  text-align: center;
+  font-size: 16px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  &:hover {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+  }
+}
+
+
+/************Toolbar***************/
+
+.toolbar {
+  display: flex; /* contexte sur le parent */
+  justify-content: space-between; /* alignement vertical */
+  height: 5%;
+  align-items: center;
+  padding: 15px;
+  * {
+    display: flex;
+    height: 100%;
+    position: relative;
+    align-items: center;
+  }
+  .App-logo {
+    width: 5%;
+    margin-right: 20px;
+  }
+  .App-title {
+    font-size: 50px;
+    width: 100%;
+  }
+  .search {
+    width: 100%;
+    .search-icon {
+      width: 5%;
+    }
+    input {
+      font-size: 20px;
+      height: 40px;
+      background-color: $color-background;
+      width: 100%;
+      color: $color-placeholder-text;
+    }
+  }
+  .App-button-main {
+    display: block;
+    font-size: 19px;
+    background-color: $color-accent;
+    color: $color-light-text;
+    width: 20%;
+    &:hover {
+      background-color: $color-primary;
+      color: $color-accent;
+    }
+  }
+  .App-settings {
+    margin-left: 80px;
+    margin-right: 20px;
+    width: 2%;
+  }
+}
+
+/********************Tabs*****************************/
+
+.tabs {
+  height: 36px;
+  margin: auto;
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+  user-select: none;
+  cursor: pointer;
+  .tab {
+    margin: 0;
+    padding: 10px;
+    box-sizing: border-box;
+    &:nth-child(1)  {
+      right: 0;
+    }
+  }
+}
+
+.in {
+  background: $color-accent;
+  color: $color-light-text;
+  clip-path: inset(0 50% 0 0);
+  transition: .3s cubic-bezier(0,0,0,1);
+  width: inherit;
+  height: inherit;
+  text-transform: uppercase;
+  font-size: .6em;
+  letter-spacing: .2em;
+  &:first-child {
+    background: $color-primary;
+    color: $color-placeholder-text;
+  }
+}
+
+.tab-neutral {
+  background-color: $color-background;
+  color: $color-accent;
+}
+
+.tab-selected {
+  background-color:  $color-accent;
+  color: $color-primary;
+}
+
+/********************Page Fragment*****************************/
+
+.pagefragment {
+  padding: 40px;
+  .pagefragment-title {
+    text-align: left;
+    font-size: 1.5em;
+  }
+}
+
+/********Popupmenu*********************************************/
+
+.App-popupmenu {
+  position: absolute;
+  visibility: hidden;
+  width: 150px;
+  color: black;
+  border-radius: 2px;
+  right: 0px;
+  top: 0px;
+  z-index: 2;
+  .App-popupmenu li {
+    list-style-type: none;
+    cursor: pointer;
+    margin: 20px auto;
+    &:hover {
+      color: $color-accent;
+    }
+  }
+}
+
+/*****************States**************************/
+
+.show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}

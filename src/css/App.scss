@@ -1,0 +1,23 @@
+@import '../core/css/App.scss';
+
+.project {
+  padding: 20px;
+  width: 12%;
+  .project-menu {
+    
+  }
+  .project-title {
+
+  }
+  .project-path {
+    color: $color-placeholder-text
+  }
+  .project-toggle {
+    background-color: #66bb6a;
+    border: none;
+    &:hover {
+      background-color: #aed581;
+      color: white;
+    }
+  }
+}
